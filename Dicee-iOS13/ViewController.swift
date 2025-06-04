@@ -23,8 +23,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func rollDIceButton(_ sender: Any) {
-        diceImageViewOne.image = UIImage(imageLiteralResourceName: "DiceFour")
-        diceImageViewTwo.image = UIImage(imageLiteralResourceName: "DiceFour")
+        diceImageViewOne.image = [ UIImage(imageLiteralResourceName: "DiceOne"),UIImage(imageLiteralResourceName: "DiceTwo"), UIImage(imageLiteralResourceName: "DiceThree"), UIImage(imageLiteralResourceName: "DiceFour"), UIImage(imageLiteralResourceName: "DiceFive"),UIImage(imageLiteralResourceName: "DiceSix") ] [5]
+      
     }
 }
 
