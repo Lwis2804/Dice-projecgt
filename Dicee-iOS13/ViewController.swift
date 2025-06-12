@@ -15,13 +15,6 @@ class ViewController: UIViewController {
     
     var leftDiceValue = 1
     var rightDiceValue = 4
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        diceImageViewOne.image = UIImage(imageLiteralResourceName: "DiceOne")
-        diceImageViewOne.alpha = 0.5
-        diceImageViewTwo.image = UIImage(imageLiteralResourceName: "DiceSix")
-    }
 
 
     @IBAction func rollDIceButton(_ sender: Any) {
