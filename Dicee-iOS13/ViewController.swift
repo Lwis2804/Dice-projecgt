@@ -13,19 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageViewOne: UIImageView!
     @IBOutlet weak var diceImageViewTwo: UIImageView!
     
-    var leftDiceValue = 1
-    var rightDiceValue = 4
-
-
     @IBAction func rollDIceButton(_ sender: Any) {
         
+        var diceArray = [ UIImage(imageLiteralResourceName: "DiceOne"),UIImage(imageLiteralResourceName: "DiceTwo"), UIImage(imageLiteralResourceName: "DiceThree"), UIImage(imageLiteralResourceName: "DiceFour"), UIImage(imageLiteralResourceName: "DiceFive"),UIImage(imageLiteralResourceName: "DiceSix") ]
         
-        diceImageViewOne.image = [ UIImage(imageLiteralResourceName: "DiceOne"),UIImage(imageLiteralResourceName: "DiceTwo"), UIImage(imageLiteralResourceName: "DiceThree"), UIImage(imageLiteralResourceName: "DiceFour"), UIImage(imageLiteralResourceName: "DiceFive"),UIImage(imageLiteralResourceName: "DiceSix") ] [leftDiceValue]
+        diceImageViewOne.image = diceArray [Int.random(in: 0...5)]
       
-        diceImageViewTwo.image = [ UIImage(imageLiteralResourceName: "DiceOne"),UIImage(imageLiteralResourceName: "DiceTwo"), UIImage(imageLiteralResourceName: "DiceThree"), UIImage(imageLiteralResourceName: "DiceFour"), UIImage(imageLiteralResourceName: "DiceFive"),UIImage(imageLiteralResourceName: "DiceSix") ] [rightDiceValue]
-        
-        leftDiceValue = leftDiceValue + 1
-        rightDiceValue = rightDiceValue - 1
+        diceImageViewTwo.image = diceArray [Int.random(in: 0...5)]
         
     }
 }
